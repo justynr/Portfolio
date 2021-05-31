@@ -79,7 +79,7 @@ export default function Page({ preview, children }) {
         <Nav />
         <InnerStyles>{children}</InnerStyles>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
