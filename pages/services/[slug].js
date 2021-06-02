@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import getAllServices from '../../lib/api';
 
 export default function ServicesPage() {
   return (
@@ -9,4 +10,13 @@ export default function ServicesPage() {
       <p>Services Page</p>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allWorks = await getWorks();
+  return {
+    props: {
+      allWorks,
+    },
+  };
 }

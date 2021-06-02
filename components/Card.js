@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import CoverImage from './cover-image';
+import PostBody from './post-body';
 import CardContainer from './styles/CardStyles';
 
 function OddEven(position) {
@@ -9,7 +10,7 @@ function OddEven(position) {
   return 'even';
 }
 
-export default function WorkCard({ card, path }) {
+export default function Card({ card }, path) {
   const pos = OddEven(card.position);
 
   return (
@@ -18,7 +19,7 @@ export default function WorkCard({ card, path }) {
         <div className={`flex-container ${pos}`}>
           <div className="text">
             <h2>{card.projectname}</h2>
-            <p>{card.description}</p>
+            <PostBody content={card.description} />
           </div>
           <div>
             <CoverImage
