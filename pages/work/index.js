@@ -1,6 +1,6 @@
-import { getWorks } from '@/lib/api';
 import Head from 'next/head';
-import WorkSection from '../../components/WorkSection';
+import { getWorks } from '../../lib/api';
+import CardSection from '../../components/CardSection';
 
 export default function WorkPage({ allWorks }) {
   return (
@@ -8,7 +8,7 @@ export default function WorkPage({ allWorks }) {
       <Head>
         <title>Justyn Roy | Work</title>
       </Head>
-      <WorkSection allWorks={allWorks} />
+      <CardSection allCards={allWorks} path="work" />
       <p>Work Page</p>
     </div>
   );
