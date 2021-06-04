@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import CardSection from '../../components/CardSection';
-import Card from '../../components/Card';
 import { getAllServices } from '../../lib/api';
 
 export default function ServicesPage({ allServices }) {
