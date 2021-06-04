@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Space = styled.div`
-  padding-top: 10rem;
+  padding-top: 60px;
 `;
 
 export default function SectionSeparator() {

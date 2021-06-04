@@ -4,6 +4,7 @@ import Card from './Card';
 const CardSectionStyles = styled.div``;
 
 export default function WorkSection({ allCards }, path) {
+  console.log(path);
   return (
     <CardSectionStyles>
       {allCards.map((card) => (

@@ -4,6 +4,10 @@ const CardContainer = styled.div`
   .flex-container {
     cursor: pointer;
     display: flex;
+    height: 500px;
+  }
+  h2.home {
+    margin-top: 0;
   }
   .odd {
     flex-direction: row;
@@ -17,8 +21,19 @@ const CardContainer = styled.div`
   }
   .text {
     background-color: var(--darkTheme);
-    padding: 1rem 2rem;
+    padding: 60px;
+  }
+  .text-left {
+    background-color: var(--darkTheme);
+    text-align: right;
+    padding: 60px;
   }
 `;
 
-export default CardContainer;
+const Picture = styled.img`
+  /* height: 500px; */
+  width: 100;
+  background-color: blue;
+`;
+
+export { CardContainer, Picture };

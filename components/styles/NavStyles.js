@@ -1,29 +1,27 @@
 import styled from 'styled-components';
 
 const NavStyles = styled.ul`
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 60px;
   display: flex;
   justify-self: end;
-  justify-content:center;
-  font-size: 2rem;
+  justify-content: center;
+  font-size: 26px;
+  width: 816px;
+  justify-content: space-between;
+  font-weight: 400;
   a,
   button {
-    padding: 1rem 3rem;
-    display: flex;
+    /* padding: 1rem 3rem; */
+    /* display: flex;
     align-items: center;
     position: relative;
     text-transform: capitalize;
-    font-weight: 400;
-    font-size: 1em;
+    font-size: 30px; */
     background: none;
-    border: 0;
+    border: 2;
     cursor: pointer;
     color: var(--fontBody);
-    @media (max-width: 700px) {
-      font-size: 10px;
-      padding: 0 10px;
-    }
     &:after {
       height: 2px;
       background: var(--lightTheme);
