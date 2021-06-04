@@ -4,7 +4,9 @@ const GlobalStyles = createGlobalStyle`
  @font-face {
     font-family: 'roboto-mono';
     src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
-    src: url('https://use.typekit.net/yqq6zwp.css');
+    /* src: url('https://use.typekit.net/yqq6zwp.css');
+    src: url('https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)');
+    src: url('https://fonts.googleapis.com/css2?family=Material+Icons'); */
     font-weight: normal;
     font-style: normal;
     color: var(--fontBody)
@@ -65,6 +67,27 @@ const GlobalStyles = createGlobalStyle`
   button {
     font-family: 'roboto mono', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   };
+
+  p.hamburger{
+    display: none;
+  }
+
+
+  .desktopButton{
+    display: block;
+  }
+  
+  
+  /* Screen 320 */
+  @media only screen and (max-width: 320px) {
+    body {
+      background-color: lightblue;
+    }
+    p.hamburger{
+      display:block;
+      justify-content: flex-end;
+  }
+}
 `;
 
 const InnerStyles = styled.div`

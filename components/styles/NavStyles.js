@@ -46,11 +46,18 @@ const NavStyles = styled.ul`
       }
     }
   }
-  @media (max-width: 1300px) {
+  /* @media (max-width: 1300px) {
     border-top: 1px solid var(--lightGray);
     width: 100%;
     justify-content: center;
     font-size: 1.5rem;
+  } */
+
+  .hamburger {
+    width: 816px;
+    content: url('/static/menu_black_24dp.svg');
+    background-color: #f6aef9;
+    justify-content: flex-end;
   }
 `;
 
