@@ -20,3 +20,11 @@ export async function getStaticProps() {
     },
   };
 }
+
+export async function getStaticPaths() {
+  const allWorks = await getAllWorksWithSlug();
+  return {
+    paths: allWorks?.map((work) => `/work/${work.slug}`) || [],
+    fallback: false,
+  };
+}
