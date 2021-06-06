@@ -4,7 +4,9 @@ const GlobalStyles = createGlobalStyle`
  @font-face {
     font-family: 'roboto-mono';
     src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
-    /* format:('woff2'); */
+    /* src: url('https://use.typekit.net/yqq6zwp.css');
+    src: url('https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)');
+    src: url('https://fonts.googleapis.com/css2?family=Material+Icons'); */
     font-weight: normal;
     font-style: normal;
     color: var(--fontBody)
@@ -32,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--darkTheme);
     background-image: url("/static/background.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     color: var(--fontBody);
 }
   *, *:before, *:after {
@@ -46,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2;
   }
+
   a {
     text-decoration: none;
     color: var(--fontBody);
@@ -54,16 +57,27 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: underline;
     color: var(--fontBody);
   }
-
+  h2 {
+    font-family: 'stolzl', sans-serif, 'arial', ---apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+  }
+ p {
+   font-size: 16px;
+   font-weight: 400;
+ }
   button {
     font-family: 'roboto mono', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   };
+
+ 
+  
+  
+
 `;
 
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 2rem;
 `;
 
 export { GlobalStyles, InnerStyles };

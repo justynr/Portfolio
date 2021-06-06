@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
+const IntroSection = styled.div`
+  width: 536px;
+  margin: 0 auto;
+`;
+
 const Name = styled.div`
   font-family: stolzl, sans-serif;
-  font-weight: 400;
-  font-size: 7rem;
+  letter-spacing: 10px;
+  font-weight: 600;
+  font-size: 75px;
   font-style: normal;
   text-align: center;
-  padding-top: 8rem;
   color: var(--lightTheme);
   line-height: 1;
 `;
 
 const Tag = styled.div`
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 31px;
   font-style: normal;
   text-align: center;
   color: var(--lightTheme);
@@ -21,9 +26,9 @@ const Tag = styled.div`
 
 export default function Intro({ homePage }) {
   return (
-    <section>
+    <IntroSection>
       <Name>{homePage.name}</Name>
       <Tag>{homePage.tagline}</Tag>
-    </section>
+    </IntroSection>
   );
 }

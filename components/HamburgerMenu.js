@@ -1,14 +1,19 @@
 import Link from 'next/link';
-import styled from 'styled-components';
-import { HamburgerContainer } from './styles/HamburgerMenuStyles';
+import {
+  CloseIcon,
+  HamburgerContainer,
+  Icon,
+  NavLink,
+  Buns,
+} from './styles/HamburgerMenuStyles';
 
-import { NavStyles, NavLink, Bars, NavMenu } from './styles/NavStyles';
-
-export default function Nav() {
+export default function HamburgerMenu() {
   return (
-    <NavStyles>
-      <Bars />
-      <NavMenu>
+    <HamburgerContainer>
+      <Icon>
+        <CloseIcon />
+      </Icon>
+      <Buns>
         <Link href="/">
           <NavLink>Home</NavLink>
         </Link>
@@ -27,7 +32,7 @@ export default function Nav() {
         <Link href="/resume">
           <NavLink>Resume</NavLink>
         </Link>
-      </NavMenu>
-    </NavStyles>
+      </Buns>
+    </HamburgerContainer>
   );
 }

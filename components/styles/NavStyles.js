@@ -1,59 +1,83 @@
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
 
-const NavStyles = styled.ul`
-  margin: 0;
-  padding: 0;
+export const NavStyles = styled.nav`
+  margin: 0 auto;
+  padding: 60px 0px;
   display: flex;
-  justify-self: end;
-  justify-content:center;
-  font-size: 2rem;
-  a,
-  button {
-    padding: 1rem 3rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    text-transform: capitalize;
-    font-weight: 400;
-    font-size: 1em;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    color: var(--fontBody);
-    @media (max-width: 700px) {
-      font-size: 10px;
-      padding: 0 10px;
-    }
-    &:after {
-      height: 2px;
-      background: var(--lightTheme);
-      content: '';
-      width: 0;
-      position: absolute;
-      transform: translateX(-50%);
-      transition: width 0.4s;
-      transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
-      left: 50%;
-      margin-top: 2rem;
-    }
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      outline: none;
-      &:after {
-        width: calc(100% - 60px);
-      }
-      @media (max-width: 700px) {
-        width: calc(100% - 10px);
-      }
-    }
-  }
-  @media (max-width: 1300px) {
-    border-top: 1px solid var(--lightGray);
-    width: 100%;
-    justify-content: center;
-    font-size: 1.5rem;
+  justify-content: space-between;
+  width: 816px;
+  align-items: center;
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 816px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
-export default NavStyles;
+export const NavLink = styled.div`
+  color: var(--fontBody);
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    /* background: #fff; */
+    color: var(--lightTheme);
+  }
+`;
+
+export const Bars = styled(FaBars)`
+  display: none;
+  color: var(--fontBody);
+  font-size: 30px;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+
+    cursor: pointer;
+  }
+`;
+
+/* &:after {
+    height: 2px;
+    background: var(--lightTheme);
+    content: '';
+    width: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: width 0.4s;
+    transition-timing-function: cubic-bezier(1, -0.65, 0, 2.31);
+    left: 50%;
+    margin-top: 2rem;
+  } */
+/* &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    &:after {
+      width: calc(100% - 60px);
+    }
+    @media (max-width: 700px) {
+      width: calc(100% - 10px);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    width: 100%;
+    justify-content: center; 
+  } */
