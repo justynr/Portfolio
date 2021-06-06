@@ -24,7 +24,7 @@ export default function Card({ card }, path) {
 
   return (
     <CardContainer>
-      <Link href={`/${path}/${card.slug}`}>
+      <Link href={`/work/${card.slug}`}>
         <div className={`flex-container ${pos}`}>
           <div className={textPos}>
             <h2 className="home">{card.projectname}</h2>
