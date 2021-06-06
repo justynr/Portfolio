@@ -3,7 +3,14 @@ import Container from './container';
 import SectionSeparator from './section-separator';
 
 const FooterStyles = styled.footer`
-  text-align: center;
+  text-align: right;
+  padding: 10px;
+  line-height: 1;
+`;
+
+const FootContainer = styled.footer`
+  text-align: right;
+  font-size: 2px;
   line-height: 1;
 `;
 
@@ -11,10 +18,10 @@ export default function Footer() {
   return (
     <FooterStyles>
       <SectionSeparator />
-      <Container>
-        <p>Website Design: Kristina Groeger</p>
-        <p>Website Development: Justyn Roy</p>
-      </Container>
+      <FootContainer>
+        {/* <p>Website Design: Kristina Groeger</p>
+        <p>Website Development: Justyn Roy</p> */}
+      </FootContainer>
       <SectionSeparator />
     </FooterStyles>
   );
