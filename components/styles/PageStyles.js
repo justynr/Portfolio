@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--darkTheme);
     background-image: url("/static/background.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     color: var(--fontBody);
 }
   *, *:before, *:after {
@@ -48,6 +48,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2;
   }
+
   a {
     text-decoration: none;
     color: var(--fontBody);
@@ -68,26 +69,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'roboto mono', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   };
 
-  p.hamburger{
-    display: none;
-  }
-
-
-  .desktopButton{
-    display: block;
-  }
+ 
   
   
-  /* Screen 320 */
-  @media only screen and (max-width: 320px) {
-    body {
-      background-color: lightblue;
-    }
-    p.hamburger{
-      display:block;
-      justify-content: flex-end;
-  }
-}
+
 `;
 
 const InnerStyles = styled.div`
