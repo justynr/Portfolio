@@ -39,7 +39,7 @@ export const NavLink = styled.div`
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: white;
+  color: var(--fontBody);
   font-size: 30px;
   @media screen and (max-width: 800px) {
     display: flex;
