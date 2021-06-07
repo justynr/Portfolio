@@ -1,30 +1,36 @@
 import Head from 'next/head';
-import getAllServices from '../../lib/api';
+import CoverImage from '../../components/cover-image';
+import { getAllServicesWithSlug, getServiceBySlug } from '../../lib/api';
+import { CMS_NAME } from '../../lib/constants';
 
-export default function ServicesPage() {
+export default function Work({ service }) {
+  // console.log(service);
   return (
-    <div>
+    <>
       <Head>
-        <title>Justyn Roy | Services</title>
+        <title>{`${CMS_NAME} | ${service.projectname}`}</title>
       </Head>
-      <p>Services Page</p>
-    </div>
+      <h1>{service.projectname}</h1>
+      <CoverImage
+        title={service.projectname}
+        responsiveImage={service.photo.responsiveImage}
+      />
+      <p>{service.description}</p>
+    </>
   );
 }
 
-export async function getStaticProps() {
-  const allWorks = await getWorks();
-  return {
-    props: {
-      allWorks,
-    },
-  };
+export async function getStaticProps({ params, preview = false }) {
+  const service = await getServiceBySlug(params.slug, preview);
+  // console.log(service);
+  return { props: { service } };
 }
 
 export async function getStaticPaths() {
-  const allWorks = await getAllWorksWithSlug();
+  const allServices = await getAllServicesWithSlug();
+  // console.log(allServices);
   return {
-    paths: allWorks?.map((work) => `/work/${work.slug}`) || [],
+    paths: allServices?.map((service) => `/services/${service.slug}`) || [],
     fallback: false,
   };
 }

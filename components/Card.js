@@ -17,14 +17,13 @@ function OddEvenText(position) {
   return 'text';
 }
 
-export default function Card({ card }, path) {
-  console.log(path);
+export default function Card({ card, path }) {
   const pos = OddEven(card.position);
   const textPos = OddEvenText(card.position);
 
   return (
     <CardContainer>
-      <Link href={`/work/${card.slug}`}>
+      <Link href={`/${path}/${card.slug}`}>
         <div className={`flex-container ${pos}`}>
           <div className={textPos}>
             <h2 className="home">{card.projectname}</h2>
