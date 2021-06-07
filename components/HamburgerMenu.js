@@ -6,31 +6,33 @@ import {
   NavLink,
   Buns,
 } from './styles/HamburgerMenuStyles';
+import { useMenu } from '../lib/menuState';
 
 export default function HamburgerMenu() {
+  const { closeMenu, menuOpen } = useMenu();
   return (
-    <HamburgerContainer>
-      <Icon>
+    <HamburgerContainer open={menuOpen}>
+      <Icon type="button" onClick={closeMenu}>
         <CloseIcon />
       </Icon>
       <Buns>
         <Link href="/">
-          <NavLink>Home</NavLink>
+          <NavLink onClick={closeMenu}>Home</NavLink>
         </Link>
         <Link href="/work">
-          <NavLink>Work</NavLink>
+          <NavLink onClick={closeMenu}>Work</NavLink>
         </Link>
         <Link href="/contact">
-          <NavLink>Contact</NavLink>
+          <NavLink onClick={closeMenu}>Contact</NavLink>
         </Link>
         <Link href="/services">
-          <NavLink>Services</NavLink>
+          <NavLink onClick={closeMenu}>Services</NavLink>
         </Link>
         <Link href="/about">
-          <NavLink>About</NavLink>
+          <NavLink onClick={closeMenu}>About</NavLink>
         </Link>
         <Link href="/resume">
-          <NavLink>Resume</NavLink>
+          <NavLink onClick={closeMenu}>Resume</NavLink>
         </Link>
       </Buns>
     </HamburgerContainer>
