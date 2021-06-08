@@ -47,6 +47,10 @@ export const NavLink = styled.div`
     /* background: #fff; */
     color: var(--lightTheme);
   }
+
+  @media screen and (max-width: 800px) {
+    font-size: 35px;
+  }
 `;
 
 export const Buns = styled.div`

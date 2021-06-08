@@ -3,7 +3,6 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import CoverImage from '../../components/cover-image';
 import { getWorkBySlug, getAllWorksWithSlug } from '../../lib/api';
-import Container from '../../components/container';
 import PostBody from '../../components/post-body';
 import SectionSeparator from '../../components/section-separator';
 import { CMS_NAME } from '../../lib/constants';

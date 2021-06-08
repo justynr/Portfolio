@@ -10,7 +10,7 @@ export default function Page({ preview, children }) {
     <>
       <GlobalStyles />
       <Meta />
-      <div className="min-h-screen">
+      <div>
         {preview && <Alert preview={preview} />}
         <Nav />
         <HamburgerMenu />
