@@ -320,7 +320,7 @@ textarea {
     --maxWidth: 1200px;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 16px;
     background-color: var(--darkTheme);
     background-image: url("/static/background.svg");
     background-repeat: no-repeat;
