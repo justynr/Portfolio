@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Image } from 'react-datocms';
-import Container from './container';
 import CoverImage from './cover-image';
 import SectionSeparator from './section-separator';
 import PostBody from './post-body';
