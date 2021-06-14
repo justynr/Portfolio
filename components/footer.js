@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Container from './container';
 import SectionSeparator from './section-separator';
 
 const FooterStyles = styled.footer`

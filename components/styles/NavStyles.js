@@ -8,6 +8,10 @@ export const NavStyles = styled.nav`
   justify-content: space-between;
   width: 816px;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    width: auto;
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -18,6 +22,7 @@ export const NavMenu = styled.div`
 
   @media screen and (max-width: 800px) {
     display: none;
+    width: auto;
   }
 `;
 
@@ -32,7 +37,6 @@ export const NavLink = styled.div`
   text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
-    /* background: #fff; */
     color: var(--lightTheme);
   }
 `;

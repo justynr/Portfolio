@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { HamburgerContainer } from './styles/HamburgerMenuStyles';
+import { useMenu } from '../lib/menuState';
 
 import { NavStyles, NavLink, Bars, NavMenu } from './styles/NavStyles';
 
 export default function Nav() {
+  const { openMenu } = useMenu();
   return (
     <NavStyles>
-      <Bars />
+      <Bars type="button" onClick={openMenu} />
       <NavMenu>
         <Link href="/">
           <NavLink>Home</NavLink>
