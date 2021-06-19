@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import WorkSection from '../components/WorkSection';
+import CardSection from '../components/CardSection';
 import SectionSeparator from '../components/section-separator';
 import Intro from '../components/intro';
 
 import { getHomePage, getWorks } from '../lib/api';
 import { CMS_NAME } from '../lib/constants';
 
-export default function Index({ allPosts, homePage, allWorks }) {
+export default function Index({ homePage, allWorks }) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ export default function Index({ allPosts, homePage, allWorks }) {
       <>
         <Intro homePage={homePage} />
         <SectionSeparator />
-        <WorkSection allWorks={allWorks} />
+        <CardSection allCards={allWorks} path="work" />
       </>
     </>
   );

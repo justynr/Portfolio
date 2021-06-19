@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const CardContainer = styled.div`
   .flex-container {
-    cursor: pointer;
+    cursor: progress;
     display: flex;
-    height: 500px;
+    height: 400px;
   }
   h2.home {
     margin-top: 0;
@@ -27,6 +27,23 @@ const CardContainer = styled.div`
     background-color: var(--darkTheme);
     text-align: right;
     padding: 60px;
+  }
+
+  .pic {
+    width: 100;
+  }
+
+  .topCardLeft {
+    border: 2px solid yellow;
+    border-radius: 100px 0px 0px 0px;
+  }
+  .topCardRight {
+    border: 2px solid cyan;
+    border-radius: 0px 100px 0px 0px;
+  }
+
+  .bottomCard {
+    border-radius: 0px 0px 100px 100px;
   }
 `;
 
