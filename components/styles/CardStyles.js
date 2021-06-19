@@ -34,11 +34,11 @@ const CardContainer = styled.div`
   }
 
   .topCardLeft {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     border-radius: 100px 0px 0px 0px;
   }
   .topCardRight {
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     border-radius: 0px 100px 0px 0px;
   }
 
