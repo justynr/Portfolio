@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const CardContainer = styled.div`
   .flex-container {
-    cursor: pointer;
+    cursor: progress;
     display: flex;
-    height: 500px;
+    height: 400px;
   }
   h2.home {
     margin-top: 0;
@@ -27,6 +27,39 @@ const CardContainer = styled.div`
     background-color: var(--darkTheme);
     text-align: right;
     padding: 60px;
+  }
+
+  .pic {
+    width: 100;
+  }
+
+  .topCardLeft {
+    /* border: 2px solid yellow; */
+    border-radius: 100px 0px 0px 0px;
+  }
+  .topCardRight {
+    /* border: 2px solid orange; */
+    border-radius: 0px 100px 0px 0px;
+  }
+
+  .bottomPicLeft {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .bottPicRight {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 0px 100px;
+  }
+
+  .bottomTextLeft {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 0px 100px;
+  }
+
+  .bottTextRight {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 100px 0px;
   }
 `;
 
