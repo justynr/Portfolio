@@ -5,6 +5,13 @@ const FooterStyles = styled.footer`
   text-align: right;
   padding: 10px;
   line-height: 1;
+  height: 15rem;
+  /* background-color: var(--darkTheme);
+  background-image: url('/static/FooterBG.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+  background-position-y: bottom; */
 `;
 
 const FootContainer = styled.footer`
@@ -16,12 +23,12 @@ const FootContainer = styled.footer`
 export default function Footer() {
   return (
     <FooterStyles>
-      <SectionSeparator />
+      {/* <SectionSeparator /> */}
       <FootContainer>
         {/* <p>Website Design: Kristina Groeger</p>
         <p>Website Development: Justyn Roy</p> */}
       </FootContainer>
-      <SectionSeparator />
+      {/* <SectionSeparator /> */}
     </FooterStyles>
   );
 }

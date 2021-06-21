@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const CardContainer = styled.div`
   .flex-container {
-    cursor: progress;
+    cursor: pointer;
     display: flex;
     height: 400px;
   }
@@ -34,31 +34,25 @@ const CardContainer = styled.div`
   }
 
   .topCardLeft {
-    /* border: 2px solid yellow; */
     border-radius: 100px 0px 0px 0px;
   }
   .topCardRight {
-    /* border: 2px solid orange; */
     border-radius: 0px 100px 0px 0px;
   }
 
-  .bottomPicLeft {
-    /* border: 2px solid lime; */
-    border-radius: 0px 0px 100px 0px;
-  }
-
-  .bottPicRight {
-    /* border: 2px solid lime; */
+  .bottPicLeft {
     border-radius: 0px 0px 0px 100px;
   }
 
-  .bottomTextLeft {
-    /* border: 2px solid lime; */
+  .bottPicRight {
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .bottTextLeft {
     border-radius: 0px 0px 0px 100px;
   }
 
   .bottTextRight {
-    /* border: 2px solid lime; */
     border-radius: 0px 0px 100px 0px;
   }
 `;

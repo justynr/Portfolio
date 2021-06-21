@@ -324,7 +324,7 @@ textarea {
     background-color: var(--darkTheme);
     background-image: url("/static/background.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     color: var(--fontBody);
 }
   *, *:before, *:after {
