@@ -16,31 +16,36 @@ function OddEvenText(position) {
   }
   return 'text';
 }
-function topOrBottom(position, cardCount) {
-  if (position === 1) {
-    return 'topCardRight';
-  }
-  if (cardCount === position) {
-    return 'bottomCard';
-  }
+
+function bottText(position, cardCount) {
+  if (position === cardCount && position % 2 === 0) return 'bottTextLeft';
+  if (position === cardCount && position % 2 === 1) return 'bottTextRight';
+}
+function bottPic(position, cardCount) {
+  if (position === cardCount && position % 2 === 0) return 'bottPicLeft';
+  if (position === cardCount && position % 2 === 1) return 'bottPicRight';
 }
 
+const topText = (position) => (position === 1 ? 'topCardRight' : '');
 const topPic = (position) => (position === 1 ? 'topCardLeft' : '');
 
 export default function Card({ card, path, cardCount }) {
   const pos = OddEven(card.position);
   const textPos = OddEvenText(card.position);
-  const firstOrLast = topOrBottom(card.position, cardCount);
+  const firstText = topText(card.position, cardCount);
+  const lastText = bottText(card.position, cardCount);
+
   const firstPic = topPic(card.position);
+  const lastPic = bottPic(card.position, cardCount);
 
   return (
     <CardContainer>
       <Link href={`/${path}/${card.slug}`}>
-        <div className={`flex-container ${pos} ${firstOrLast}`}>
-          <div className={`${textPos} ${firstOrLast}`}>
+        <div className={`flex-container ${pos} `}>
+          <div className={`${textPos} ${firstText} ${lastText}`}>
             <h2 className="home">
               {card.projectname}
-              {firstOrLast}
+              {lastPic}
             </h2>
             <PostBody classes="" content={card.description} />
           </div>
@@ -49,7 +54,7 @@ export default function Card({ card, path, cardCount }) {
               title={card.projectname}
               alt={card.projectname}
               data={card.photo.responsiveImage}
-              className={firstPic}
+              className={`${firstPic} ${lastPic}`}
             />
           </div>
         </div>

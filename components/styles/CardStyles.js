@@ -38,12 +38,28 @@ const CardContainer = styled.div`
     border-radius: 100px 0px 0px 0px;
   }
   .topCardRight {
-    /* border: 2px solid cyan; */
+    /* border: 2px solid orange; */
     border-radius: 0px 100px 0px 0px;
   }
 
-  .bottomCard {
-    border-radius: 0px 0px 100px 100px;
+  .bottomPicLeft {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 100px 0px;
+  }
+
+  .bottPicRight {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 0px 100px;
+  }
+
+  .bottomTextLeft {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 0px 100px;
+  }
+
+  .bottTextRight {
+    /* border: 2px solid lime; */
+    border-radius: 0px 0px 100px 0px;
   }
 `;
 
