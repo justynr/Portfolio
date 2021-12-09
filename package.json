@@ -48,8 +48,13 @@
   },
   "eslintConfig": {
     "extends": [
-      "wesbos"
-    ]
+      "wesbos",
+      "next"
+    ],
+    "rules": {
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off"
+    }
   },
   "//": "This is our babel config, I prefer this over a .babelrc file",
   "babel": {
